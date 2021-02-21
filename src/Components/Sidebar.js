@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Sidebar.css";
+import "../Stylesheets/Sidebar.css";
 import {Avatar, IconButton} from "@material-ui/core"
 import {DonutLarge, SearchOutlined} from '@material-ui/icons';
 import ChatIcon from '@material-ui/icons/Chat';
