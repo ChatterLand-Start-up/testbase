@@ -1,4 +1,4 @@
-import './App.css';
+import '../Stylesheets/App.css';
 import Sidebar from "./Sidebar.js"
 import div from "@material-ui/core/Grid";
 
