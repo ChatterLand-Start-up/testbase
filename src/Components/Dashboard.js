@@ -7,16 +7,22 @@ import ChatRoom from './ChatRoom';
 
 export default function Dashboard() {
     return (
-        <div className="app">
-            <h1 className="header">ChatterLand</h1>
-            <div container className="app_body">
-                <div container className="side_body">
-                    <Sidebar/>
+        <div>
+            <div class="container app">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="header text-center">Chatters' Land</h1>
+                    </div>    
                 </div>
-                <div container className="chatroom_body">
-                    <ChatRoom/>
-                </div>
-            </div>
+                
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-3"><Sidebar/></div>
+                            <div class="col-9"><ChatRoom/></div>
+                        </div>
+                    </div>    
+                
+            </div>    
         </div>
     )
 }

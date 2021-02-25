@@ -25,12 +25,14 @@ function SidebarChat() {
     },[]);
 
     return (
+       <div class="window">
         <div className="sidebarChat">
             <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
             <div className="sidebarChat_info">
                 {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg}/>)}
             </div>
         </div>
+       </div>  
     );
 }
 
