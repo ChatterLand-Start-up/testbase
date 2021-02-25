@@ -11,12 +11,19 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar_header">
-                <Avatar/>
-                <div className="sidebar_headerRight">
-                    <IconButton><DonutLarge/> </IconButton>
-                    <IconButton><ChatIcon/> </IconButton>
-                    <IconButton><MoreVertIcon/>   </IconButton>                 
+                <div class="row ">
+                    <div class="col-3">
+                        <Avatar/>
+                    </div>
+                    <div class="col">
+                        <div className="float-right">
+                            <IconButton><DonutLarge/> </IconButton>
+                            <IconButton><ChatIcon/> </IconButton>
+                            <IconButton><MoreVertIcon/>   </IconButton>                 
+                        </div>
+                    </div>
                 </div>
+              
             </div>
 
             <div className="sidebar_search">
@@ -27,6 +34,9 @@ function Sidebar() {
             </div>
 
             <div className="sidebar_chats">
+                <SidebarChat/>
+                <SidebarChat/>
+                <SidebarChat/>
                 <SidebarChat/>
             </div> 
             

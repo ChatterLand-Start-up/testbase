@@ -1,4 +1,6 @@
 .default_Message {
   padding: 10px;
   text-align: center;
+  background-color: darkgrey;
+  height: 90vh;
 }

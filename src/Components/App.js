@@ -13,11 +13,9 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className="container">
-      <div className="center">
+      <div>
         {user? <Dashboard/> : <Login/>}
-      </div> 
-    </div>
+      </div>
   )
 }
 
@@ -28,7 +26,19 @@ function Login() {
   }
 
   return (
-      <button type="button" className="btn btn-primary" onClick={signInWithGoogle}>Sign in with Google</button>
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+          <span class="col-6 border border-success d-flex justify-content-center">
+            <div class="row m-2 d-flex justify-content-center">
+              <h2 class="col-12 text-center">Welcome to Chatters' Land</h2>
+              <p class="col-12 text-center">You can use Google to sign up</p>
+              <button type="button" className="btn btn-success" onClick={signInWithGoogle}>Sign in with Google</button>
+            </div>
+          </span>  
+        <div class="col"></div>
+      </div>
+    </div>
   )
 }
 
