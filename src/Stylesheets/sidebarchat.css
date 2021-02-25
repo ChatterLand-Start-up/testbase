@@ -8,3 +8,7 @@
 .sidebarChat:hover {
   background-color: darkgrey;
 }
+
+.sidebarChat_info {
+  padding: 10px;
+}

@@ -1,23 +1,12 @@
 import Dashboard from "./Dashboard";
-import { useAuthState } from 'react-firebase-hooks/auth';
-import 'firebase/firestore';
 import 'firebase/auth';
-import firebase from 'firebase/app';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import '../Stylesheets/Login.css';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
-firebase.initializeApp({
-  apiKey: "AIzaSyBNmIFAS0gik3qmliWp_zYNWgQupe6EI_w",
-  authDomain: "chatter-s-land.firebaseapp.com",
-  projectId: "chatter-s-land",
-  storageBucket: "chatter-s-land.appspot.com",
-  messagingSenderId: "199851842950",
-  appId: "1:199851842950:web:e3270884ac71be7bb3e007",
-  measurementId: "G-7F0CPQFGPV"
-})
+import firebaseapp from '../Config/FirebaseConfig'
+import firebase from 'firebase';
 
 const auth = firebase.auth();
-const firestore = firebase.firestore();
 
 function App() {
 

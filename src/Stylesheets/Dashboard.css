@@ -3,18 +3,38 @@
   place-items: center;
   background-color: darkslategrey;
   height: 120vh;
+  width: 100vw;
 }
 
 .app_body {
   display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.side_body {
+  display: flex;
+  flex-direction: column;
   background-color: #dadbd3;
   box-shadow: 5px 5px 15px 5px #050b07;
-  height: 100vh;
-  width: 90vw;
-  margin-top: -40px;
+  height: 100%;
+  width: 30%;
+  margin: 20px;
 }
+
+.chatroom_body {
+  display: flex;
+  flex-direction: column;
+  background-color: #dadbd3;
+  box-shadow: 5px 5px 15px 5px #050b07;
+  height: 100%;
+  width: 70%;
+  margin: 20px;
+}
+
 .header {
   color: whitesmoke;
-  margin-top: -40px;
-  margin-bottom: -50px;
+  height: 100%;
+  width: 100%;
 }
