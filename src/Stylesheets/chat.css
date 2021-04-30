@@ -1,0 +1,30 @@
+.chatFrame {
+  background-image: url(https://i.pinimg.com/originals/8f/ba/cb/8fbacbd464e996966eb9d4a6b7a9c21e.jpg);
+  height: 90vh;
+}
+
+.content {
+  min-height: 75vh;
+}
+
+.chatHeader {
+  background-color: #dadbd3;
+}
+
+.chatName {
+  font-size: xx-small;
+}
+
+.footer {
+  background-color: #dadbd3;
+  min-height: 20%;
+}
+
+.footer > form > input {
+  border-radius: 30px;
+  border: none;
+}
+
+.footer > form > button {
+  display: none;
+}

@@ -1,6 +1,5 @@
 .sidebarChat {
   padding: 20px;
-  display: flex;
   cursor: pointer;
   border-bottom: 1px solid whitesmoke;
 }
@@ -11,4 +10,8 @@
 
 .sidebarChat_info {
   padding: 10px;
+}
+
+.shortheight {
+  max-height: fit-content;
 }

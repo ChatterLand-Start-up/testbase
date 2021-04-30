@@ -10,6 +10,8 @@ const config = {
     measurementId: "G-7F0CPQFGPV"
 };
 
-const firebase = Fb.initializeApp(config);
+const firebasecf = Fb.initializeApp(config);
 
-export default firebase;
+
+
+export default firebasecf
