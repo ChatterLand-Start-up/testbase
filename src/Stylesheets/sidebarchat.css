@@ -15,3 +15,8 @@
 .shortheight {
   max-height: fit-content;
 }
+
+.blacktext {
+  text-decoration: none;
+  color: black;
+}

@@ -5,6 +5,7 @@ import div from "@material-ui/core/Grid";
 import Logout from "./App.js"
 import Chat from './Chat';
 import {BrowserRouter as Router, Switch,Route} from "react-router-dom";
+import ChatMobile from './ChatMobile'
 
 export default function Dashboard() {
     return (
@@ -22,7 +23,8 @@ export default function Dashboard() {
                                 <div class="col-12 col-md-3 p-1"><Sidebar/></div>
                                 <Switch>
                                     <Route path="/rooms/:roomId">
-                                        <div class="col-12 col-md-9 p-1"><Chat/></div>
+                                        <div class="d-none d-md-block col-md-9 p-1"><Chat/></div>
+                                        <div class="col-12 d-block d-md-none p-1"><ChatMobile/></div>
                                     </Route>
                                     <Route path="/">
                                     </Route>

@@ -7,11 +7,12 @@ import {useParams} from "react-router-dom"
 import firebasecf from "../Config/FirebaseConfig"
 import {useStateValue} from "./StateProvider"
 import firebase from "firebase"
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import {Link} from 'react-scroll'
 
-function Chat() {
+function ChatMobile() {
     const db= firebasecf.firestore();
     const[value, setValue]= useState()
-    const test="false";
     const sendMessage =(e)=>{
         e.preventDefault();
         db.collection("rooms").doc(roomId).collection("messages").add(
@@ -54,22 +55,22 @@ function Chat() {
     
 
     return (
-        <div class="chatFrame rounded">
+        <div id="chatMobile" class="chatFrame rounded">
             <div class="container" >
                         
                     <div class="row chatHeader rounded-top border-bottom">
-                        <div class="d-flex align-items-center col-6">
+                        <div class="d-flex align-items-center col-7">
                             <Avatar/>
-                            <div className="d-flex p-1 chatHeaderinfo align-items-center">
-                                    <h4 class="mb-0">{roomName}</h4>
+                            <div className="chatHeaderinfo">
+                                    <h3 class="mb-0">{roomName}</h3>
                             </div>
                         </div>
                         
                         <div class="col my-auto headerInfoRight">
                             <div className="float-right">
-                                <IconButton><SearchOutlined/> </IconButton>
-                                <IconButton><AttachFile/> </IconButton>
-                                <IconButton><MoreVert/>   </IconButton>   
+                                <IconButton size="small"><SearchOutlined fontSize="small"/> </IconButton>
+                                <IconButton size="small"><AttachFile fontSize="small"/> </IconButton>
+                                <IconButton size="small"><MoreVert fontSize="small"/>   </IconButton>   
                             </div>
                         </div>    
                     </div>
@@ -102,7 +103,7 @@ function Chat() {
                     
                     <div className="row footer d-flex align-items-center">
                         <IconButton className="col-1"><InsertEmoticon/></IconButton>
-                        <form className="col-10 p-0">
+                        <form className="col-9 p-0">
                             <input value={value} 
                             onChange={(e)=>setValue(e.target.value)}
                             placeholder="Type a Message"
@@ -111,15 +112,23 @@ function Chat() {
 
                             <button onClick={sendMessage} type="submit" class="float-right"></button>
                         </form>
-                        <div className="col-1">
+                        <div className="col-1 p-0">
                             <IconButton><MicIcon/></IconButton>
                         </div>
                     </div>
-            
+                    
+                    <div className="row Toproll">
+                            <div className="col-12 d-flex justify-content-center">
+                                <Link to="sidebar" smooth="true" duration="250">
+                                    <IconButton size="small"><ArrowUpwardIcon/></IconButton>
+                                </Link>
+                                
+                            </div>
+                    </div>
 
             </div>
         </div>    
     )
 }
 
-export default Chat
+export default ChatMobile

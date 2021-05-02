@@ -1,12 +1,10 @@
 import { Avatar } from '@material-ui/core';
 import React, {useEffect, useState}from 'react';
 import "../Stylesheets/sidebarchat.css";
-import firebaseapp from '../Config/FirebaseConfig'
 import 'firebase/firestore';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
-import ChatMessage from './ChatMessage';
 import firebase from 'firebase';
 import {Link} from "react-router-dom";
+import {Link as Scroll} from "react-scroll"
 import firebasecf from "../Config/FirebaseConfig"
 
 const firestore = firebase.firestore();
@@ -57,18 +55,24 @@ function SidebarChat({addNewChat, id, name}) {
 
     return !addNewChat? (
 
-        <Link to={`/rooms/${id}`}>
-            <div className="shortheight">
-                <div className="row p-2 sidebarChat">
-                    <Avatar className="col-4 p-0"src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
-                    <h4 className="col-8">{name}</h4>   
-                    <span className="col-12 d-flex">
-                        {messages[0]?.message}
-                    </span>
-                </div>
       
-             </div>  
-        </Link>
+            <Scroll to="chatMobile" smooth="true" duration="500" >
+                  <Link to={`/rooms/${id}`}  >
+                    <div className="shortheight">
+                        <div className="row p-2 sidebarChat">
+                            <Avatar className="col-4"src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
+                            <div class="col-8">
+                                <h5 className="blacktext">{name}</h5>   
+                                <span className="d-flex blacktext">
+                                    {messages[0]?.message}
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>  
+                </Link>
+            </Scroll>
+       
 
     ): (
         <div onClick={createChat} className="sidebarChat">

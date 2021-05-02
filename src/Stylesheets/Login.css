@@ -11,3 +11,8 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.showImg {
+  height: 250px;
+  width: 250px;
+}
